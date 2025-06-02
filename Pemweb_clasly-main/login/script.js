@@ -1,6 +1,6 @@
-document.querySelector("form").addEventListener("submit", function (e) {
+// login/script.js
+document.getElementById("login-form").addEventListener("submit", function(e) {
   e.preventDefault();
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  alert(`Login attempt for: ${email}`);
+  // Simulasi login berhasil
+  window.location.href = "../index.html"; // Redirect ke homepage
 });

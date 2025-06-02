@@ -1,6 +1,5 @@
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  alert(`Registering: ${name} (${email})`);
-});
+document.getElementById("form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Registered successfully! You can now log in.");
+      window.location.href = "../login/login.html";
+    });
