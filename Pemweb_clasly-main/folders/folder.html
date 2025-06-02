@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Folders - Classly</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="folder-header">
+    <h1>Folder Materi</h1>
+    <input type="file" id="uploadInput" multiple hidden />
+    <button class="upload-btn" onclick="document.getElementById('uploadInput').click()">Upload Folder Materi</button>
+  </div>
+
+  <div id="content">
+    <div class="empty-message" id="emptyMessage">
+      Folder kamu masih kosong. Ayo centralisasi folder materi mu!
+    </div>
+    <div class="folder-grid" id="folderGrid" style="display: none;"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
