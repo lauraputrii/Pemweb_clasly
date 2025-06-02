@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Classly Notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="notes-header">
+    <h1>Your Notes</h1>
+  </div>
+
+  <div class="notes-container" id="notes-container">
+    <!-- Folder dan file catatan akan ditambahkan di sini -->
+  </div>
+
+  <button class="add-btn" id="addNoteBtn" title="Tambahkan notes kamu">+</button>
+
+  <div class="add-menu hidden" id="addMenu">
+    <button onclick="addFolder()">Tambah Folder</button>
+    <button onclick="addNote()">Tambah File Catatan</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
