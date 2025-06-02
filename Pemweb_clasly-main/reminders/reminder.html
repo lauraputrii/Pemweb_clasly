@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reminder Settings - Classly</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="reminder-container">
+    <h1>Pengaturan Reminder Kelas</h1>
+
+    <form id="reminderForm">
+      <label for="reminderTime">Notifikasi muncul sebelum kelas dimulai:</label>
+      <select id="reminderTime">
+        <option value="30">30 menit</option>
+        <option value="25">25 menit</option>
+        <option value="20">20 menit</option>
+        <option value="15">15 menit</option>
+        <option value="10">10 menit</option>
+        <option value="5">5 menit</option>
+      </select>
+
+      <label for="repeat">Ingin reminder berulang sampai kelas dimulai?</label>
+      <select id="repeat">
+        <option value="no">Tidak, hanya satu kali</option>
+        <option value="yes">Ya, ulangi terus</option>
+      </select>
+
+      <div id="repeatIntervalContainer" style="display: none;">
+        <label for="repeatInterval">Ulangi setiap:</label>
+        <select id="repeatInterval">
+          <option value="5">5 menit</option>
+          <option value="10">10 menit</option>
+        </select>
+      </div>
+
+      <button type="submit">Simpan Pengaturan</button>
+    </form>
+
+    <div id="savedMessage" class="hidden">Pengaturan reminder berhasil disimpan!</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
