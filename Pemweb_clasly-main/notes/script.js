@@ -23,3 +23,4 @@ function addFolder() {
 function addNote() {
   window.location.href = "note-template.html";
 }
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catatan - Classly</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .note-template {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      color: white;
+    }
+
+    .note-title {
+      font-size: 2rem;
+      font-weight: bold;
+      border: none;
+      background: transparent;
+      color: white;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .note-section {
+      margin-bottom: 20px;
+    }
+
+    .note-textarea {
+      width: 100%;
+      min-height: 80px;
+      padding: 10px;
+      background-color: #2b2b2b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      resize: vertical;
+      margin-top: 10px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #666;
+    }
+
+    .embedded-content {
+      margin-top: 20px;
+    }
+
+    img, iframe {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="note-template">
+    <input class="note-title" id="noteTitle" placeholder="Judul catatan..." />
+
+    <div class="note-section">
+      <label for="noteContent">Isi catatan:</label>
+      <textarea class="note-textarea" id="noteContent" placeholder="Tulis isi catatanmu di sini..."></textarea>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn" onclick="embedImage()">Add Image</button>
+      <button class="btn" onclick="embedURL()">Embed Link</button>
+    </div>
+
+    <div id="embeddedContent" class="embedded-content"></div>
+  </div>
+
+  <script>
+    function embedImage() {
+      const url = prompt("Masukkan URL gambar:");
+      if (url) {
+        const img = document.createElement("img");
+        img.src = url;
+        document.getElementById("embeddedContent").appendChild(img);
+      }
+    }
+
+    function embedURL() {
+      const url = prompt("Masukkan URL:");
+      if (url) {
+        const iframe = document.createElement("iframe");
+        iframe.src = url;
+        iframe.width = "100%";
+        iframe.height = "300";
+        document.getElementById("embeddedContent").appendChild(iframe);
+      }
+    }
+
+    // Rename note title = rename file logic (jika backend kelak)
+    document.getElementById('noteTitle').addEventListener('input', function() {
+      document.title = this.value || "Catatan - Classly";
+    });
+  </script>
+</body>
+</html>
